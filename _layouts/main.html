@@ -12,6 +12,22 @@ layout: default
       <p>{{site.about-author}}</p>
     </div>
   </header> <!-- End Header -->
+
+  <section class="categories">
+    <h3>Categories</h3>
+    <ul>
+      <li><a href="#" onclick="filterCategory('all')">All</a></li>
+      {% for category in site.categories %}
+        <li>
+          <a href="#" onclick="filterCategory('{{ category[0] }}')">
+            {{ category[0] }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+  
+  
   <footer>
     <section class="contact">
       <h3 class="contact-title">Contact me</h3>
@@ -51,3 +67,28 @@ layout: default
 <div class="content-box clearfix">
   {{ content }}
 </div>
+
+<script>
+  function filterCategory(selectedCategory) {
+    // 모든 게시글 요소 가져오기
+    const posts = document.querySelectorAll('.post');
+
+    // 모든 게시글을 순회하면서 선택된 카테고리와 비교
+    posts.forEach(post => {
+      // 게시글의 data-category 값을 가져옵니다
+      const postCategory = post.getAttribute('data-category');
+
+      // 조건에 맞는 게시글만 보여주고, 나머지는 숨기기
+      if (selectedCategory === 'all' || postCategory === selectedCategory) {
+        post.style.display = 'block'; // 게시글 표시
+      } else {
+        post.style.display = 'none'; // 게시글 숨김
+      }
+    });
+  }
+
+  // 페이지 로드 시 "All" 카테고리를 기본으로 보여줌
+  document.addEventListener('DOMContentLoaded', () => {
+    filterCategory('all');
+  });
+</script>

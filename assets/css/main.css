@@ -935,7 +935,11 @@ table tfoot td {
   padding: 20px 10px;
   background-color: #ffffff;
 }
-
+.categories ul li a {
+  font-family: 'Lato', sans-serif; /* Lato 폰트 적용 */
+  color: #515151; /* 폰트 색상 통일 */
+  text-decoration: none; /* 필요시 링크 밑줄 제거 */
+}
 .about {
   margin: 0 0 40px;
   text-align: center;
@@ -1479,3 +1483,4 @@ a.newer-posts:hover {
     font-size: 21px;
   }
 }
+
