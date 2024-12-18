@@ -15,19 +15,16 @@ for md_path in md_paths:
     with open(md_path, mode='r') as original_file:
         with open(new_md_path,mode = 'w') as file:
             tempstring = md_path.stem.replace(" ","-").lower()
-            
             description_page = tempstring[tempstring.find('.')+2:] if '.' in tempstring else ""
             header = \
 f"""
----
-layout: post
+---layout: post
 title: {md_path.name}
 category: leetcode
 date: {now.year}-{now.month}-{now.day} {now.strftime("%H:%M:%S")} +0900
 description: https://leetcode.com/problems/{description_page}/description/
 img: leetcode.png # Add image post (optional)
 fig-caption: # Add figcaption (optional)
-
 ---
 
             """
