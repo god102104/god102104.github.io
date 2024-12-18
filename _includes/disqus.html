@@ -3,18 +3,7 @@
     {% if site.discus-identifier %}
     <div id="disqus_thread" class="article-comments"></div>
     <script>
-      var disqus_config = function () {
-        this.page.url = 'https://god102104.github.io' + window.location.pathname;  
-        this.page.identifier = window.location.pathname; 
-        // Disable recommended content (ads)
-        this.callbacks.onReady = [function() {
-          var $disqusAds = document.querySelectorAll('.ads, .promoted-link, .discovery');
-          if ($disqusAds.length) {
-              $disqusAds.forEach(ad => ad.style.display = 'none');
-          }
-        }];
-      };
-      (function() { // DON'T EDIT BELOW THIS LINE
+      (function() {
           var d = document, s = d.createElement('script');
           s.src = '//{{ site.discus-identifier }}.disqus.com/embed.js';
           s.setAttribute('data-timestamp', +new Date());
