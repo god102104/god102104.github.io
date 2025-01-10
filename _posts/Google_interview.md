@@ -1,3 +1,14 @@
+---
+layout: post
+title: Google Interview
+category: leetcode
+date: 2025-01-10 13:32:00 +0900
+description: 
+img:  # Add image post (optional)
+fig-caption: # Add figcaption (optional)
+---
+
+
 |ID  |Title                                                                     |URL                                                                                 |Is Premium|Acceptance %|Difficulty|Frequency %|
 |----|--------------------------------------------------------------------------|------------------------------------------------------------------------------------|----------|------------|----------|-----------|
 |1   |Two Sum                                                                   |/problems/two-sum                                                                   |N         |49.1%       |Easy      |24.3305%;  |
