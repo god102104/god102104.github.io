@@ -3,8 +3,8 @@ layout: post
 title: Google Interview
 category: leetcode
 date: 2025-01-10 13:32:00 +0900
-description: 
-img:  # Add image post (optional)
+description: https://leetcode.com/u/god102104/
+img: leetcode.png # Add image post (optional)
 fig-caption: # Add figcaption (optional)
 ---
 

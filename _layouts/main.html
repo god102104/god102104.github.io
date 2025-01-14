@@ -41,8 +41,12 @@ layout: default
           <li><a href="https://facebook.com/{{ site.social-facebook }}" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
         {% else %}
           <li><a href="https://facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li> -->
-        {% endif %}
-        {% if site.social-github %}
+        <!-- {% endif %} -->
+        {% if site.social-leetcode %}
+          <li class="leetcode"><a href="https://leetcode.com/u/{{site.social-github}}" target="_blank"><i class="fa fa-github"></i></a></li>
+        {% else %}
+          <li class="leetcode"><a href="https://leetcode.com/u/god102104/" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+        {% if site.social-github %} 
           <li class="github"><a href="http://github.com/{{site.social-github}}" target="_blank"><i class="fa fa-github"></i></a></li>
         {% else %}
           <li class="github"><a href="http://github.com/" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
